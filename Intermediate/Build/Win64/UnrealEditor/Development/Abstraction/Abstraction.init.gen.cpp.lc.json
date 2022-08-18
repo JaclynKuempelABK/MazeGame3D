@@ -1,0 +1,13 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\jcarterkumpel\\development\\level up u repositories\\unreal challenges\\abstraction\\intermediate\\build\\win64\\unrealeditor\\inc\\abstraction\\abstraction.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jcarterkumpel\\development\\level up u repositories\\unreal challenges\\abstraction\\intermediate\\build\\win64\\abstractioneditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\jcarterkumpel\\development\\level up u repositories\\unreal challenges\\abstraction\\intermediate\\build\\win64\\unrealeditor\\development\\abstraction\\definitions.abstraction.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\jcarterkumpel\\Development\\Level Up U Repositories\\Unreal Challenges\\Abstraction\\Source\\Abstraction\\Abstraction.Build.cs",
+		"C:\\Users\\jcarterkumpel\\Development\\Level Up U Repositories\\Unreal Challenges\\Abstraction\\Source\\Abstraction.Target.cs",
+		"C:\\Users\\jcarterkumpel\\Development\\Level Up U Repositories\\Unreal Challenges\\Abstraction\\Source\\AbstractionEditor.Target.cs"
+	],
+	"EngineVersion": "5.0.3"
+}

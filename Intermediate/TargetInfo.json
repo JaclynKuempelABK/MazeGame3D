@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Abstraction",
+			"Path": "C:\\Users\\jcarterkumpel\\Development\\Level Up U Repositories\\Unreal Challenges\\Abstraction\\Source\\Abstraction.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "AbstractionEditor",
+			"Path": "C:\\Users\\jcarterkumpel\\Development\\Level Up U Repositories\\Unreal Challenges\\Abstraction\\Source\\AbstractionEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
