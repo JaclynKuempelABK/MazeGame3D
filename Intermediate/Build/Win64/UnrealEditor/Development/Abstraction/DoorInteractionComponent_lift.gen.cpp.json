@@ -1,0 +1,15 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\jcarterkumpel\\development\\level up u repositories\\unreal challenges\\abstraction\\intermediate\\build\\win64\\unrealeditor\\inc\\abstraction\\doorinteractioncomponent_lift.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jcarterkumpel\\development\\level up u repositories\\unreal challenges\\abstraction\\intermediate\\build\\win64\\abstractioneditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\jcarterkumpel\\development\\level up u repositories\\unreal challenges\\abstraction\\intermediate\\build\\win64\\unrealeditor\\development\\abstraction\\definitions.abstraction.h",
+            "c:\\users\\jcarterkumpel\\development\\level up u repositories\\unreal challenges\\abstraction\\source\\abstraction\\public\\doorinteractioncomponent_lift.h",
+            "c:\\users\\jcarterkumpel\\development\\level up u repositories\\unreal challenges\\abstraction\\intermediate\\build\\win64\\unrealeditor\\inc\\abstraction\\doorinteractioncomponent_lift.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

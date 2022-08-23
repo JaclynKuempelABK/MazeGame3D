@@ -17,7 +17,11 @@ class ABSTRACTION_API AInteractableDoor : public AStaticMeshActor
 public:
 	AInteractableDoor();
 
+	
+
 protected:
-	UPROPERTY(EditAnywhere, NoClear)
+	UPROPERTY(EditAnywhere)
 	UDoorInteractionComponent* DoorInteractionComponent;
+
+	
 };

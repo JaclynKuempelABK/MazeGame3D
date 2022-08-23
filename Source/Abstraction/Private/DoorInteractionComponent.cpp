@@ -23,10 +23,22 @@ void UDoorInteractionComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	StartRotation = GetOwner()->GetActorRotation();
-	FinalRotation = GetOwner()->GetActorRotation() + DesiredRotation;
-	//ensure TimeToRotate is greater than EPSILON
-	CurrentRotationTime = 0.0f;
+	//CurrentOpenTime = 0.0f;
+
+	if (rotator)
+	{
+		StartRotation = GetOwner()->GetActorRotation();
+		FinalRotation = GetOwner()->GetActorRotation() + DesiredRotation;
+		//ensure TimeToRotate is greater than EPSILON
+	}
+	else if (slider)
+	{
+		//StartLocation = GetOwner()->GetActorLocation();
+		//FinalLocation = GetOwner()->GetActorLocation();
+		StartLocation = GetOwner()->GetActorLocation();
+		FinalLocation = GetOwner()->GetActorLocation() + DesiredMovement;
+	}
+	
 	
 }
 
@@ -36,21 +48,44 @@ void UDoorInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	if (CurrentRotationTime < TimeToRotate)
-	{
-		if (TriggerBox && GetWorld() && GetWorld()->GetFirstLocalPlayerFromController())
+	//if (!isLocked)
+	//{
+		if (CurrentOpenTime < TimeToOpen)
 		{
-			APawn* PlayerPawn = GetWorld()->GetFirstPlayerController()->GetPawn();
-			if (PlayerPawn && TriggerBox->IsOverlappingActor(PlayerPawn))
+			if (TriggerBox && GetWorld() && GetWorld()->GetFirstLocalPlayerFromController())
 			{
-				CurrentRotationTime += DeltaTime;
-				const float TimeRatio = FMath::Clamp(CurrentRotationTime / TimeToRotate, 0.0f, 1.0f);
-				const float RotationAlpha = OpenCurve.GetRichCurveConst()->Eval(TimeRatio);
-				const FRotator CurrentRotation = FMath::Lerp(StartRotation, FinalRotation, RotationAlpha);
-				GetOwner()->SetActorRotation(CurrentRotation);
+				APawn* PlayerPawn = GetWorld()->GetFirstPlayerController()->GetPawn();
+				if (PlayerPawn && TriggerBox->IsOverlappingActor(PlayerPawn))
+				{
+					if (rotator)
+					{
+						CurrentOpenTime += DeltaTime;
+						const float TimeRatio = FMath::Clamp(CurrentOpenTime / TimeToOpen, 0.0f, 1.0f);
+						const float RotationAlpha = OpenCurve.GetRichCurveConst()->Eval(TimeRatio);
+						const FRotator CurrentRotation = FMath::Lerp(StartRotation, FinalRotation, RotationAlpha);
+						GetOwner()->SetActorRotation(CurrentRotation);
+					}
+
+
+					else if (slider)
+					{
+						CurrentOpenTime += DeltaTime;
+						const float TimeRatio = FMath::Clamp(CurrentOpenTime / TimeToOpen, 0.0f, 1.0f);
+						const FVector CurrentPosition = FMath::Lerp(StartLocation, FinalLocation, TimeRatio);
+						GetOwner()->SetActorLocation(CurrentPosition);
+					}
+
+
+				}
 			}
 		}
-	}
+	//}
+
+	
+
+
+
+	
 
 }
 

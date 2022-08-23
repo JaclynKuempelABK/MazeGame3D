@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeDoorInteractionComponent() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	ENGINE_API UClass* Z_Construct_UClass_ATriggerBox_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FRuntimeFloatCurve();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
 	void UDoorInteractionComponent::StaticRegisterNativesUDoorInteractionComponent()
 	{
@@ -32,13 +33,23 @@ void EmptyLinkFunctionForGeneratedCodeDoorInteractionComponent() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_rotator_MetaData[];
+#endif
+		static void NewProp_rotator_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_rotator;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_slider_MetaData[];
+#endif
+		static void NewProp_slider_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_slider;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_TimeToOpen_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_TimeToOpen;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DesiredRotation_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_DesiredRotation;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_TimeToRotate_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_TimeToRotate;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TriggerBox_MetaData[];
 #endif
@@ -47,6 +58,10 @@ void EmptyLinkFunctionForGeneratedCodeDoorInteractionComponent() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_OpenCurve_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_OpenCurve;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DesiredMovement_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_DesiredMovement;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -64,19 +79,43 @@ void EmptyLinkFunctionForGeneratedCodeDoorInteractionComponent() {}
 	};
 #endif
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredRotation_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_rotator_MetaData[] = {
 		{ "Category", "DoorInteractionComponent" },
 		{ "ModuleRelativePath", "Public/DoorInteractionComponent.h" },
+	};
+#endif
+	void Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_rotator_SetBit(void* Obj)
+	{
+		((UDoorInteractionComponent*)Obj)->rotator = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_rotator = { "rotator", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UDoorInteractionComponent), &Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_rotator_SetBit, METADATA_PARAMS(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_rotator_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_rotator_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_slider_MetaData[] = {
+		{ "Category", "DoorInteractionComponent" },
+		{ "ModuleRelativePath", "Public/DoorInteractionComponent.h" },
+	};
+#endif
+	void Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_slider_SetBit(void* Obj)
+	{
+		((UDoorInteractionComponent*)Obj)->slider = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_slider = { "slider", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UDoorInteractionComponent), &Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_slider_SetBit, METADATA_PARAMS(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_slider_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_slider_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToOpen_MetaData[] = {
+		{ "Category", "DoorInteractionComponent" },
+		{ "ModuleRelativePath", "Public/DoorInteractionComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToOpen = { "TimeToOpen", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDoorInteractionComponent, TimeToOpen), METADATA_PARAMS(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToOpen_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToOpen_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredRotation_MetaData[] = {
+		{ "Category", "DoorInteractionComponent" },
+		{ "Comment", "// Rotator variables\n" },
+		{ "ModuleRelativePath", "Public/DoorInteractionComponent.h" },
+		{ "ToolTip", "Rotator variables" },
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredRotation = { "DesiredRotation", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDoorInteractionComponent, DesiredRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredRotation_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToRotate_MetaData[] = {
-		{ "Category", "DoorInteractionComponent" },
-		{ "ModuleRelativePath", "Public/DoorInteractionComponent.h" },
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToRotate = { "TimeToRotate", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDoorInteractionComponent, TimeToRotate), METADATA_PARAMS(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToRotate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToRotate_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TriggerBox_MetaData[] = {
 		{ "Category", "DoorInteractionComponent" },
@@ -91,11 +130,21 @@ void EmptyLinkFunctionForGeneratedCodeDoorInteractionComponent() {}
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_OpenCurve = { "OpenCurve", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDoorInteractionComponent, OpenCurve), Z_Construct_UScriptStruct_FRuntimeFloatCurve, METADATA_PARAMS(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_OpenCurve_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_OpenCurve_MetaData)) }; // 1196190759
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredMovement_MetaData[] = {
+		{ "Category", "DoorInteractionComponent" },
+		{ "ModuleRelativePath", "Public/DoorInteractionComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredMovement = { "DesiredMovement", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDoorInteractionComponent, DesiredMovement), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredMovement_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDoorInteractionComponent_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_rotator,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_slider,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToOpen,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredRotation,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TimeToRotate,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_TriggerBox,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_OpenCurve,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDoorInteractionComponent_Statics::NewProp_DesiredMovement,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UDoorInteractionComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UDoorInteractionComponent>::IsAbstract,
@@ -133,9 +182,9 @@ void EmptyLinkFunctionForGeneratedCodeDoorInteractionComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Abstraction_Source_Abstraction_Public_DoorInteractionComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UDoorInteractionComponent, UDoorInteractionComponent::StaticClass, TEXT("UDoorInteractionComponent"), &Z_Registration_Info_UClass_UDoorInteractionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDoorInteractionComponent), 1803170720U) },
+		{ Z_Construct_UClass_UDoorInteractionComponent, UDoorInteractionComponent::StaticClass, TEXT("UDoorInteractionComponent"), &Z_Registration_Info_UClass_UDoorInteractionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDoorInteractionComponent), 1807612418U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Abstraction_Source_Abstraction_Public_DoorInteractionComponent_h_1541716230(TEXT("/Script/Abstraction"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Abstraction_Source_Abstraction_Public_DoorInteractionComponent_h_2680757754(TEXT("/Script/Abstraction"),
 		Z_CompiledInDeferFile_FID_Abstraction_Source_Abstraction_Public_DoorInteractionComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Abstraction_Source_Abstraction_Public_DoorInteractionComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
